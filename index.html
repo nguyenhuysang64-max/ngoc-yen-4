@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>20/10 - Ngọc Yến ❤️ Huy Sang</title>
+
+<style>
+
+*{box-sizing:border-box}
+
+body{
+
+ margin:0;min-height:100vh;text-align:center;color:white;
+
+ font-family:Georgia,serif;
+
+ background:radial-gradient(circle at top,#642341,#210b1b 65%,#090509);
+
+ overflow-x:hidden
+
+}
+
+main{width:92%;max-width:760px;margin:auto;padding:35px 0}
+
+h1{font-size:clamp(38px,9vw,65px);color:#ffb6d2;
+
+ text-shadow:0 0 20px #ff438b}
+
+h1 span{display:block;color:#ff4f96;font-style:italic}
+
+p{line-height:1.9}
+
+.tag{letter-spacing:4px;color:#ffe1ee}
+
+.photo{
+
+ width:240px;height:300px;max-width:80vw;
+
+ margin:25px auto;padding:7px;
+
+ border-radius:150px 150px 25px 25px;
+
+ background:linear-gradient(135deg,#ffe3ad,#ff3988);
+
+ box-shadow:0 0 35px #ff398888
+
+}
+
+.photo img{width:100%;height:100%;object-fit:cover;
+
+ border-radius:145px 145px 20px 20px}
+
+.card{
+
+ margin:24px 0;padding:25px 20px;border-radius:22px;
+
+ background:#ffffff0c;border:1px solid #ffb6d244
+
+}
+
+h2{color:#ffe0ad}
+
+.heart{
+
+ font-size:85px;color:#ff438b;
+
+ text-shadow:0 0 15px #ff438b,0 0 35px #ff438b;
+
+ animation:pulse 1.2s infinite
+
+}
+
+@keyframes pulse{50%{transform:scale(1.15)}}
+
+button{
+
+ border:0;border-radius:30px;padding:12px 20px;
+
+ background:#ff4f96;color:white;font-size:16px;
+
+ margin:8px;cursor:pointer
+
+}
+
+audio{width:100%;margin:12px 0}
+
+#lyrics{color:#ffe0ad;font-size:19px;min-height:50px}
+
+.floating{
+
+ position:fixed;bottom:-30px;animation:fly 7s linear forwards;
+
+ pointer-events:none
+
+}
+
+@keyframes fly{
+
+ to{transform:translateY(-110vh) rotate(40deg);opacity:0}
+
+}
+
+.signature{font-size:23px;color:#ff9fc5;font-style:italic}
+
+</style>
+
+</head>
+
+<body>
+
+<main>
+
+ <div class="tag">20 · 10 · 2026</div>
+
+ <h1>Chúc mừng <span>20/10</span></h1>
+
+ <p>DÀNH RIÊNG CHO NGỌC YẾN 💗</p>
+
+ <div class="photo">
+
+  <img src="ngoc-yen.jpg" alt="Ảnh Ngọc Yến">
+
+ </div>
+
+ <div class="heart">♥</div>
+
+ <section class="card">
+
+  <h2>Gửi Ngọc Yến 🌷</h2>
+
+  <p>
+
+   Nhân ngày 20/10, Sang chúc Yến luôn xinh đẹp,
+
+   vui vẻ và hạnh phúc.<br>
+
+   Mong nụ cười luôn ở trên môi Yến, mọi điều tốt đẹp
+
+   sẽ đến và những ước mơ của Yến đều trở thành hiện thực.<br>
+
+   Chúc cô gái đặc biệt này luôn được yêu thương,
+
+   trân trọng và gặp thật nhiều may mắn. 💕<br>
+
+   Dù hôm nay hay những ngày sau, mong Yến vẫn luôn
+
+   rạng rỡ theo cách riêng của mình.
+
+  </p>
+
+  <div class="signature">Từ Huy Sang ❤️</div>
+
+ </section>
+
+ <section class="card">
+
+  <h2>🎵 Bài hát dành tặng Yến</h2>
+
+  <p>Cùng Anh — Ngọc Dolil, Hagii, STee</p>
+
+  <audio id="music" controls loop>
+
+   <source src="cung-anh.mp3" type="audio/mpeg">
+
+   Trình duyệt không hỗ trợ phát nhạc.
+
+  </audio>
+
+  <div id="lyrics">♪ Một giai điệu dành riêng cho Yến ♪</div>
+
+  <button onclick="document.getElementById('music').play()">
+
+   ▶ Phát nhạc
+
+  </button>
+
+  <button onclick="document.getElementById('music').pause()">
+
+   ⏸ Tạm dừng
+
+  </button>
+
+ </section>
+
+ <section class="card">
+
+  <h2>💌 Điều Sang muốn nói</h2>
+
+  <p>
+
+   Chúc Yến có một ngày 20/10 thật đáng nhớ.
+
+   Cảm ơn Yến vì đã là một cô gái đặc biệt.
+
+   Mong những điều dịu dàng nhất sẽ luôn tìm đến Yến. 🌹
+
+  </p>
+
+  <div class="signature">Happy Women's Day! 💖</div>
+
+ </section>
+
+ <p>MADE WITH ♥ BY HUY SANG</p>
+
+</main>
+
+<script>
+
+const music = document.getElementById("music");
+
+const lyrics = document.getElementById("lyrics");
+
+music.addEventListener("play", () => {
+
+ lyrics.textContent = "♪ Nhạc dành tặng Ngọc Yến đang phát ♪";
+
+});
+
+music.addEventListener("pause", () => {
+
+ lyrics.textContent = "♪ Tạm dừng một chút nhé 💗 ♪";
+
+});
+
+function heart(){
+
+ const h = document.createElement("span");
+
+ h.className = "floating";
+
+ h.textContent = ["💗","💕","❤️","🌸"][Math.floor(Math.random()*4)];
+
+ h.style.left = Math.random()*100 + "vw";
+
+ h.style.fontSize = (16+Math.random()*22) + "px";
+
+ document.body.appendChild(h);
+
+ setTimeout(()=>h.remove(),7000);
+
+}
+
+setInterval(heart,600);
+
+</script>
+
+</body>
+
+</html>
